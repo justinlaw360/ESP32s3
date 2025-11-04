@@ -22,6 +22,9 @@ Components Preparation
 * USB cable (Type-A to Type-C) x 1
 * PCM5101 2030 speaker 8Ω 2w× 1
 * MSM261S4030H0R microphone
+* CST816 Touch driver
+* ST77916 LCD
+* QSPI connector
 
 <img width="960" height="820" alt="image" src="https://github.com/user-attachments/assets/fe1c0e5e-50e9-4dbd-b596-0e521a59ed18" />
 
