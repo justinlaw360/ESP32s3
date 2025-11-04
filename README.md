@@ -75,12 +75,12 @@ Shellgit clone -b v5.4 --recursive https://github.com/espressif/esp-idf.gitcd es
 
 Configure build for ESP32-S3 with PSRAM
 Use make.py or idf.py with parameters like:
-Shellpython3 make.py --board ESP32-S3 --flash-size 16MB --psram-size 16MB --display ST77916 --touch CST816SShow more lines
-(You’ll need to add ST77916 and CST816S drivers in lvgl_micropython/drivers if not included.)
+python3 make.py esp32 board=ESP32_GENERIC_S3 board_variant=SPIRAM_OCT flash-size=16 psram-size=16 display=ST77916 indev=CST816S
+
 
 
 Flash firmware
-Shellesptool.py --chip esp32s3 erase_flashesptool.py --chip esp32s3 write_flash -z 0x0 build/firmware.binShow more lines
+esptool.py --chip esp32s3 erase_flashesptool.py --chip esp32s3 write_flash -z 0x0 build/firmware.binShow more lines
 
 
 
@@ -88,5 +88,7 @@ Shellesptool.py --chip esp32s3 erase_flashesptool.py --chip esp32s3 write_flash 
 
 ST77916: Requires RGB or SPI interface configuration in lv_conf.h and LVGL driver setup.
 CST816S: I²C-based touch driver; ensure correct pins and enable in lvgl_micropython/drivers/touch.
+
+
 
 
