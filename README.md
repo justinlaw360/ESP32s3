@@ -57,3 +57,36 @@ dual-core processor, up to 240MHz operating frequency
 26. Charge indicator
 27. Lithium battery charge indicator, lights up when charging, off when fully charged (the light status is uncertain when the battery is not connected)
 28. I2C header connecting with internal chip, only supports the I2C peripherals and cannot be mapped to other functions
+
+⚙️ Build Steps Overview
+
+
+Install prerequisites
+Shellsudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0Show more lines
+
+
+Clone LVGL MicroPython repo
+Shellgit clone https://github.com/lvgl-micropython/lvgl_micropython.gitcd lvgl_micropythongit submodule update --init --recursiveShow more lines
+
+
+Set up ESP-IDF v5.x
+Shellgit clone -b v5.4 --recursive https://github.com/espressif/esp-idf.gitcd esp-idf./install.shsource export.shShow more lines
+
+
+Configure build for ESP32-S3 with PSRAM
+Use make.py or idf.py with parameters like:
+Shellpython3 make.py --board ESP32-S3 --flash-size 16MB --psram-size 16MB --display ST77916 --touch CST816SShow more lines
+(You’ll need to add ST77916 and CST816S drivers in lvgl_micropython/drivers if not included.)
+
+
+Flash firmware
+Shellesptool.py --chip esp32s3 erase_flashesptool.py --chip esp32s3 write_flash -z 0x0 build/firmware.binShow more lines
+
+
+
+🖥 Display & Touch Integration
+
+ST77916: Requires RGB or SPI interface configuration in lv_conf.h and LVGL driver setup.
+CST816S: I²C-based touch driver; ensure correct pins and enable in lvgl_micropython/drivers/touch.
+
+
