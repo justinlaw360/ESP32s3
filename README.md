@@ -25,40 +25,32 @@ Components Preparation
 
 <img width="960" height="820" alt="image" src="https://github.com/user-attachments/assets/fe1c0e5e-50e9-4dbd-b596-0e521a59ed18" />
 
-ESP32-S3R8
+1. ESP32-S3R8
 dual-core processor, up to 240MHz operating frequency
-16MB Flash
-QST attitude sensor
-QMI8658C (6-axis IMU includes a 3-axis gyroscope and a 3-axis accelerometer)
-TCA9554PWR
-GPIO expander chip
-PCM5101 audio decoder
-Amplifier chip
-Battery recharge manager
-ME6217C33M5G
-Low dropout regulator, 800mA output (Max.)
-RTC chip
-PCF85063 RTC chip
-Onboard ceramic antenna
-IPEX1 connector
-Switching to use external antenna via resoldering a onboard resistor
-TF card slot
-Speaker header
-Comes with 8Ω 2W 2030 speaker
-Volume adjustment knob
-Microphone
-UART header
-Power indicator
-USB Type-C port
-RTC battery header
-for connecting rechargeable RTC battery
-Charge indicator
-Lithium battery charge indicator, lights up when charging, off when fully charged (the light status is uncertain when the battery is not connected)
-I2C header
-connecting with internal chip, only supports the I2C peripherals and cannot be mapped to other functions
-RESET button
-BOOT button
-MX1.25 battery header
-MX1.25 2PIN connector, for 3.7V Lithium battery, supports charging and discharging
-Battery power supply control button
-
+2. 16MB Flash
+3. QST attitude sensor
+4. QMI8658C (6-axis IMU includes a 3-axis gyroscope and a 3-axis accelerometer)
+5. TCA9554PWR
+6. GPIO expander chip
+7. PCM5101 audio decoder
+8. Amplifier chip
+9. Battery recharge manager
+10. ME6217C33M5G
+11. Low dropout regulator, 800mA output (Max.)
+12. RTC chip
+13. PCF85063 RTC chip
+14. Onboard ceramic antenna
+15. IPEX1 connector
+16. Switching to use external antenna via resoldering a onboard resistor
+17. TF card slot
+18. Speaker header
+19. Comes with 8Ω 2W 2030 speaker
+20. Volume adjustment knob
+21. Microphone
+22. UART header
+23. Power indicator
+24. USB Type-C port
+25. RTC battery header for connecting rechargeable RTC battery
+26. Charge indicator
+27. Lithium battery charge indicator, lights up when charging, off when fully charged (the light status is uncertain when the battery is not connected)
+28. I2C header connecting with internal chip, only supports the I2C peripherals and cannot be mapped to other functions
